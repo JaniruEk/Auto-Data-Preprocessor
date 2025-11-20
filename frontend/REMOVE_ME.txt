@@ -1,0 +1,1 @@
+This folder is now managed by React/Vite. Old static files have been removed.
