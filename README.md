@@ -2,6 +2,37 @@
 
 Upload a CSV dataset, preview it, see quick stats/plots, and run an automated preprocessing pipeline (imputation, scaling, one-hot encoding). Download the processed CSV and reuse the fitted pipeline.
 
+---
+
+## Quick Start
+
+1. **Start Backend:**
+   ```powershell
+   # From project root
+   .\.venv\Scripts\Activate.ps1
+   uvicorn app.main:app --reload
+   ```
+2. **Start Frontend:**
+   ```powershell
+   cd frontend
+   npm install
+   npm run dev
+   ```
+   - Open the local URL shown in the terminal (usually http://localhost:5173).
+
+---
+
+## Data Preprocessing Pipeline
+- **Numeric columns:**
+  - Missing values imputed with median
+  - Optionally scaled (StandardScaler)
+- **Categorical columns:**
+  - Missing values imputed with most frequent
+  - One-hot encoded
+- All steps are automated using a scikit-learn pipeline. The processed data and pipeline are saved for reuse.
+
+---
+
 ## Run Backend (FastAPI)
 
 ```powershell

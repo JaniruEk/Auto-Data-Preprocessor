@@ -1,0 +1,21 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environment
+.venv/
+venv/
+ENV/
+
+# VSCode settings
+.vscode/
+
+# Node modules
+frontend/node_modules/
+
+# Build output
+frontend/dist/
+
+# Ignore all data and processed data
+app/data/
